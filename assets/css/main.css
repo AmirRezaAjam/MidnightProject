@@ -1123,12 +1123,14 @@ section,
 .about .image-section .main-image {
   border-radius: 8px;
   overflow: hidden;
+  transform: translateY(-7px); /* Lift the image up */
+
   box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
 .about .image-section .main-image img {
   width: 100%;
-  height: auto;
+  height: 680px;
   transition: transform 0.3s ease;
 }
 
@@ -1193,6 +1195,37 @@ section,
     display: inline-block;
   }
 }
+
+/* Mission & Vision — typography cleanup */
+.about .content {
+  background: var(--surface-color);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--default-color), transparent 88%);
+}
+
+.about .content .section-heading {
+  font-weight: 700;                 /* was 300 */
+  font-size: 2rem;                  /* was 2.5rem */
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 12px;
+}
+
+.about .content .lead-text {
+  font-size: 1.1rem;                /* was 1.25rem */
+  line-height: 1.9;                 /* better readability */
+  color: color-mix(in srgb, var(--default-color), transparent 8%);
+  max-width: 60ch;                  /* keep line length comfortable */
+  margin-bottom: 2rem;
+}
+
+.about .content .section-heading:nth-of-type(2) {
+  margin-top: 3rem; /* Space above Vision */
+}
+
+
 
 /*--------------------------------------------------------------
 # Services Section
